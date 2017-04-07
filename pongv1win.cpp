@@ -19,7 +19,7 @@ int PrintScr(player *py,player *py2){
 void ScrollPlayer(player *py,player *py2,char ch){
     switch (ch){
         case 'w':
-            if(py->active && py->cur+17<py->finish){
+            if(py->active && py->cur+16<py->finish){
                 py->cur++;
             }
             break;
@@ -29,7 +29,7 @@ void ScrollPlayer(player *py,player *py2,char ch){
             }
             break;
         case 'A':
-            if(py2->active && py2->cur+17<py2->finish){
+            if(py2->active && py2->cur+16<py2->finish){
                 py2->cur++;
             }
             break;
@@ -55,7 +55,7 @@ int main(){
     player2->start="            ||||            ";
     player2->cur=player2->start;
     player2->finish=player2->start+28;
-    player2->active=0;
+    player2->active=1;
     printf("basladi\n");
     while(1){
         ch=getch();

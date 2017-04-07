@@ -18,22 +18,22 @@ int PrintScr(player *py,player *py2){
 
 void ScrollPlayer(player *py,player *py2,char ch){
     switch (ch){
-        case 'w':
+        case 'w' || 'W':
             if(py->active && py->cur+16<py->finish){
                 py->cur++;
             }
             break;
-        case 's':
+        case 's' || 'S':
             if(py->active && py->cur>py->start){
                 py->cur--;
             }
             break;
-        case 'A':
+        case 0x26:
             if(py2->active && py2->cur+16<py2->finish){
                 py2->cur++;
             }
             break;
-        case 'B':
+        case 0x28:
             if(py2->active && py2->cur>py2->start){
                 py2->cur--;
             }

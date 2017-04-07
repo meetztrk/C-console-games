@@ -8,7 +8,7 @@ typedef struct{
 }player;
 
 int PrintScr(player *py,player *py2){
-    system("clear");
+    clrscr();
     //printf("start:%p\tcur:%p\tfinish:%p",py->start,py->cur,py->finish);
     for(int i=0;i<16;i++){
         printf("%c%61c\n",py->cur[i],py2->cur[i]);
